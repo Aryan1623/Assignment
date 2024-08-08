@@ -1,0 +1,223 @@
+/* Container and General Styles */
+body{
+  background-color: #f8f9fa;
+}
+
+.allcontainer, .allcontainer2, .allcontainer3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.allcontainer {
+  padding: 0 20vw;
+}
+.community{
+  display: flex;
+  margin-bottom: 30px;
+}
+.allcontainer2 {
+  padding: 0 10vw;
+  margin-top: 70px;
+}
+
+.allcontainer3 {
+  padding-right: 10vw;
+  margin-top: 50px;
+  padding-left: 5vw;
+}
+
+.container img {
+  max-width: 100%;
+  height: 120px;
+  margin-top: 30px;
+  
+}
+
+
+.textcontainer2{
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: black;
+}
+.textcontainer{
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: black;
+}
+
+.button1, .button2, .button3 {
+  padding: 10px 20px;
+  border-radius: 17px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.button1 {
+  background-color: #00184B;
+  color: white;
+  border: none;
+}
+
+.button2 {
+  background-color: #00184B;
+  color: white;
+  border: none;
+  font-size: 0.8em;
+}
+
+.button3 {
+  background-color: white;
+  color: #00184B;
+  border: 2px solid #00184B;
+  font-size: 0.8em;
+}
+
+.newcontain {
+  display: flex;
+}
+
+.newcontainname {
+  display: flex;
+  flex-direction: row; /* Default flex-direction */
+}
+
+.img, .name, .signinbuttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.signinbuttons {
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.challenge, .footer {
+  font-size: 30px;
+  color: #00184B;
+  font-weight: 500;
+}
+
+.social {
+  margin-top: 40px;
+}
+
+/* Default Styles */
+.rousel {
+  display: block;
+  margin-top: 60px;
+}
+.credits {
+  display: flex;
+  flex-direction: column;
+  /* Center the content horizontally */
+ 
+}
+.credits p {
+  font-size: 20px; /* Adjust font size as needed */
+  margin-left: 3vw;
+  
+  margin-top: 200px;
+  transform: rotate(270deg); /* Rotate the text by 90 degrees */
+  transform-origin: left bottom; /* Adjust the origin point of the rotation */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-decoration: underline;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .newcontain, .newcontainname {
+    flex-direction: column;
+  }
+
+  .signin-form {
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .credits{
+    display: none;
+  }
+  .community{
+    display: flex;
+    flex-direction: column;
+  }
+  .social{
+    margin-bottom: 10px;
+  }
+
+  
+}
+
+/* Sign In Form Styles */
+.signin-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+}
+
+.signin-form form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signin-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+.signin-form .bottomfield {
+  height: 1px;
+  background-color: purple;
+  margin: -16px 0 16px 0;
+}
+
+.signin-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: purple;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.signin-form button:hover {
+  background-color: violet;
+}
+
+/* Styles for the credits container */
+
+
+/* Styles for the name */
+
+
+
+/* Styles for the underline effect */
+
+
+
+
+
+

@@ -1,0 +1,226 @@
+
+.ax-hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+.carousel {
+  --carousel-height: 400px;
+  --carousel-width: 1000px;
+  --carousel-item-height: 150px;
+  --carousel-item-width: 150px;
+
+  width: 100%;
+}
+
+.carousel-container {
+  align-items: center;
+  display: flex;
+  min-height: var(--carousel-height);
+  margin: 0 auto;
+
+  width: 90vw;
+  position: relative;
+}
+
+.carousel-item {
+  
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 0.3s ease-in-out;
+  
+  z-index: 0;
+}
+
+.carousel-item-1 {
+  left: 10%;
+  opacity: 1;
+  height: 60vh;
+  width: 25vw;
+}
+
+.carousel-item-2 {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+  height: calc(var(--carousel-item-height)*3);
+  opacity: 1;
+  left: 50%;
+  width: calc(var(--carousel-item-width)*3 );
+  z-index: 2;
+}
+
+.carousel-item-3 {
+  left: 90%;
+  opacity: 1;
+  height: 60vh;
+  width:25vw;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+/* carousel button styles */
+.carousel-control {  
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 4px;
+  color: #aaa;
+  cursor: pointer;
+  height: 22px;
+  margin: 0 20px;
+  position: relative;
+  transform: scale(1.5);
+  transition: transform 0.5s ease-out;
+  width: 22px;
+}
+
+.carousel-control:hover {
+  transform: scale(1.3);
+}
+
+
+.carousel-control-previous::after,
+.carousel-control-previous::before {
+  box-sizing: border-box; 
+  content: '';
+  display: block;
+  height: 8px;
+  position: absolute;
+  top: 5px
+}
+.carousel-control-previous::before {
+  background: currentColor;
+  border-radius: 2px;
+  right: 11px;
+  width: 2px;
+}
+.carousel-control-previous::after {
+  border-bottom: 4px solid transparent;
+  border-right: 5px solid;
+  border-top: 4px solid transparent;
+  right: 5px;
+  width: 0;
+}
+
+
+.carousel-control-next::after,
+.carousel-control-next::before {
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 8px;
+  position: absolute;
+  top: 5px
+}
+.carousel-control-next::before {
+  background: currentColor;
+  border-radius: 2px;
+  left: 11px;
+  width: 2px;
+}
+.carousel-control-next::after {
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid;
+  border-top: 4px solid transparent;
+  left: 5px;
+  width: 0;
+}
+
+/* play button */
+.carousel-control-play::before {
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  border-top: 5px solid transparent;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 10px;
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 0;
+}
+
+/* pause button */
+.carousel-control-play.playing::before {
+  border-bottom: 0;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-top: 0;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 6px;
+  position: absolute;
+  left: 6px;
+  top: 6px; 
+  width: 6px;
+}
+
+/* add button */
+.carousel-control-add::after,
+.carousel-control-add::before {
+  background: currentColor;
+  border-radius: 5px;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  width: 10px;
+}
+.carousel-control-add::after {
+  height: 10px;
+  left: 8px;
+  top: 4px;
+  width: 2px;
+}
+.carousel-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+}
+.carousel-dots{
+  margin-top: 30px;
+}
+
+@media (max-width: 500px){
+  
+  .carousel-item-1 {
+    height: 40vh;
+    width: 22vw;
+  }
+  
+  .carousel-item-2 {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+    height: calc(var(--carousel-item-height)*3);
+    opacity: 1;
+    left: 50%;
+    width: calc(var(--carousel-item-width)*3 );
+    z-index: 2;
+  }
+  
+  .carousel-item-3 {
+    
+    height: 40vh;
+    width:12vw;
+  }
+}
